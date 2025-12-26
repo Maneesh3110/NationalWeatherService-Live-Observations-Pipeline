@@ -117,7 +117,7 @@ data/
 
 | Landing | 1-minute Rolling Averages (per station) |
 | --- | --- |
-| ![Landing screen](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/Landing_screen.png) | ![1-minute Rolling Averages (per station)](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/1-minute%20Rolling%20Averages%20(per%20station).png) |
+| ![Landing screen](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/Landing_screen_1.png) | ![1-minute Rolling Averages (per station)](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/1-minute%20Rolling%20Averages%20(per%20station).png) |
 
 | Stations Needing Attention by Humidity | 7-day Station Baselines |
 | --- | --- |
