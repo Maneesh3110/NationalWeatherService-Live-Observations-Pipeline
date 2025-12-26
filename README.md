@@ -113,6 +113,18 @@ data/
 └─ checkpoints/        # Structured Streaming checkpoints per sink
 ```
 
+## Dashboard Screenshots
+
+| Landing | 1-minute Rolling Averages (per station) |
+| --- | --- |
+| ![Landing screen](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/Landing_screen.png) | ![1-minute Rolling Averages (per station)](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/1-minute%20Rolling%20Averages%20(per%20station).png) |
+
+| Stations Needing Attention by Humidity | 7-day Station Baselines |
+| --- | --- |
+| ![Stations Needing Attention by Humidity](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/Stations%20Needing%20Attention%20by%20Humidity.png) | ![7-day Station Baselines](https://github.com/Maneesh3110/NationalWeatherService-Live-Observations-Pipeline/blob/main/output/screenshots/7-day%20Station%20Baselines.png) |
+
+
+
 ## Troubleshooting
 
 - **JAAS / LoginModule errors**: Ensure you are running a HotSpot JDK (Temurin, Zulu, etc.). IBM Semeru/OpenJ9 lacks the `com.ibm.security.auth` modules Spark expects.
