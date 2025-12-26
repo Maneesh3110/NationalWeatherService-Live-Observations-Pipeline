@@ -4,14 +4,19 @@ Near-real-time weather intelligence pipeline powered by the **National Weather S
 
 ## Architecture
 
-```
-NWS API (latest observation per station)
-        ↓  ingest_nws.py  (polls, validates)
-data/input/json_stream/*.json  (NDJSON landing zone)
-        ↓  spark_app.py  (Structured Streaming)
-data/output/{critical,avg,humidity}  (Parquet snapshots)
-        ↓  streamlit_app.py  (auto-refresh dashboard)
-```
+![Architecture Diagram](docs/Architecture.png)
+
+**Data Flow:**
+1. Python ingestor polls NWS API every 60s
+2. Validated records written as NDJSON files
+3. Spark Structured Streaming reads file stream
+4. 4 parallel streaming queries process data: 
+   - Critical events (heat/cold alerts)
+   - Rolling averages (1-min windows)
+   - Humidity attention (anomaly detection)
+   - 7-day baselines (climatology)
+5. Results written to Parquet with checkpointing
+6. Streamlit dashboard reads Parquet files (auto-refresh)
 
 Spark operates solely on landed files—no direct API calls. This makes development and replay straightforward and allows the dashboard to rehydrate from historical parquet data.
 
